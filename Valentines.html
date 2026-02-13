@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day, My Wife! 💖</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    background:black;
+    color:white;
+    overflow:hidden;
+}
+
+.intro{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    letter-spacing:3px;
+    animation: fadeOut 3s ease-in-out 3s forwards;
+    z-index:5;
+}
+
+@keyframes fadeOut{
+    to{ opacity:0; visibility:hidden; }
+}
+
+/* Slideshow Background */
+.slideshow{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.slideshow img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    transform: translate(-50%, -50%);
+    object-fit:cover;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active{
+    opacity:1;
+}
+
+/* Dark overlay */
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:0;
+}
+
+/* Main Content */
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    padding:20px;
+    opacity:0;
+    animation: fadeIn 3s ease-in-out 4s forwards;
+    z-index:2;
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:20px;
+    animation: glow 2s infinite alternate;
+    transition: opacity 0.8s ease-in-out;
+}
+
+p{
+    font-size:18px;
+    max-width:400px;
+    margin:auto;
+    line-height:1.6;
+    margin-bottom:30px;
+    transition: opacity 0.8s ease-in-out;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    background:#ff2e63;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes fadeIn{
+    to{ opacity:1; }
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #ff4e8a; }
+    to{ text-shadow:0 0 30px #ff2e63, 0 0 50px #ff99ac; }
+}
+
+/* Floating hearts */
+.heart{
+    position:absolute;
+    font-size:18px;
+    color:#ff4e8a;
+    animation: float 8s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    0%{ transform: translateY(100vh) scale(0.5); opacity:0;}
+    20%{ opacity:1;}
+    100%{ transform: translateY(-10vh) scale(1.2); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="intro">
+    A Special Message Is Loading...
+</div>
+
+<!-- Slideshow -->
+<div class="slideshow">
+    <img src="ai1.jpg" class="active">
+    <img src="ai2.jpg">
+    <img src="ai3.jpg">
+    <img src="ai4.jpg">
+    <img src="ai5.jpg">
+    <img src="ai7.jpg">
+    <img src="ai8.jpg">
+    <img src="ai9.jpg">
+    <img src="ai11.jpg">
+    <img src="ai12.jpg">
+    <img src="ai13.jpg">
+    <img src="ai14.jpg">
+    <img src="ai15.jpg">
+    <img src="ai16.jpg">
+    <img src="ai18.jpg">
+    <img src="ai19.jpg">
+    <img src="ai20.jpg">
+    <img src="ai21.jpg">
+    <img src="ai22.jpg">
+    <img src="ai23.jpg">
+    <img src="ai24.jpg">
+    <img src="ai25.jpg">
+    <img src="ai26.jpg">
+    <img src="ai27.jpg">
+    <img src="ai28.jpg">
+    <img src="ai29.jpg">
+    <img src="ai30.jpg">
+    <img src="ai31.jpg">
+    <img src="ai32.jpg">
+    <img src="ai33.jpg">
+    <img src="ai34.jpg">
+    <img src="ai36.jpg">
+    <img src="ai37.jpg">
+    <img src="ai38.jpg">
+    <img src="ai39.jpg">
+    <img src="ai40.jpg">
+    <img src="ai41.jpg">
+    <img src="ai42.jpg">
+    <img src="ai43.jpg">
+    <img src="ai44.jpg">
+    <img src="ai45.jpg">
+    <img src="ai47.jpg">
+    <img src="ai48.jpg">
+    <img src="ai49.jpg">
+    <img src="ai50.jpg">
+    <img src="ai51.jpg">
+    <img src="ai52.jpg">
+    <img src="ai53.jpg">
+    <img src="ai54.jpg">
+    <img src="ai55.jpg">
+    <img src="ai56.jpg">
+    <img src="ai58.jpg">
+    <img src="ai61.jpg">
+    <img src="ai62.jpg">
+    <img src="ai64.jpg">
+    <img src="ai65.jpg">
+    <img src="ai66.jpg">
+    <img src="ai2.jpg">
+    <img src="ai1.jpg">
+
+</div>
+
+<div class="overlay"></div>
+
+<div class="content">
+    <h1 id="titleText">For My Dearest, Ai 💖</h1>
+    <p id="messageText">
+        In a world full of ordinary moments, you are my once-in-a-lifetime miracle.
+    </p>
+    <button onclick="finalMessage()">Let's watch the stars🌌</button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="your-music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+const slides = document.querySelectorAll(".slideshow img");
+let slideIndex = 0;
+
+/* Rotating Text Arrays */
+const titles = [
+    "For My Dearest, Ai 💖",
+    "To the brighest star in my universe 🌕",
+    "We made LDR significant ↔️",
+    "To The Love of My Life ❤️",
+    "My Forever and Always 💍",
+    "This is all for you💕",
+    "Happy Valentines 💖",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "Whisper in the Sky 🍃🌃 ",
+    "To my other half 💕",
+    "If love is sure, it has a way ❤️",
+    "This is all for you💕" ,
+    "To The Love of My Life ❤️",
+    "My Forever and Always 💍",
+
+    "Distance is nothing ️🛣️",
+];
+
+const messages = [
+    "In a world full of ordinary moments, you are my once-in-a-lifetime miracle.",
+    "Every picture shows the story of our love to each other",
+    "Even our love is challeged by distance",
+    "We still made it this far ",
+    "From that, I created a poem",
+    "Its title is 'Whisper in the Sky'",
+    "I hope you'll love it",
+
+    "Somewhere where the night meets dawn,",
+    "I felt your heart, though you were gone.",
+    "Two souls adrift on silver streams,",
+    "Chasing shadows, chasing dreams.",
+
+    "When I look up at the velvet night,",
+    "I swear your stars are burning bright.",
+    "Our eyes like comets, streaking through,",
+    "A secret path that leads to you.",
+
+    "Though mountains rise and oceans divide,",
+    "I feel you always by my side.",
+    "After dark, where the world feels still,",
+    "We meet where wishes bend to will.",
+
+    "All my days I wandered blind,",
+    "Searching for what I’d never find.",
+    "Then your laughter, like a tune,",
+    "Brought the sunlight closer to the moon.",
+
+    "It wasn’t sparks that made me stay,",
+    "It was your soul that found its way.",
+    "Not love at first glance, but a gentle pull,",
+    "A tide that turns, a heart made full.",
+
+    "Through every storm, through every fear,",
+    "I sense your whisper, I know you’re near.",
+    "Your hand in mine, though unseen,",
+    "Guides me softly where we’ve been.",
+    
+    "Even time cannot erase",
+    "The way your smile lights up my space.",
+    "Though seasons change and years depart,",
+    "Your name remains carved in my heart.",
+
+    "The moon may wane, the sun may fall,",
+    "Yet I will hear your distant call.",
+    "And when the world grows dark and cold,",
+    "I find your warmth, your hand to hold.",
+
+    "A universe may stretch between,",
+    "But love can fill the endless scene.",
+    "Every heartbeat, every sigh,",
+    "A constellation in the sky.",
+
+    "No distance now, no space too vast,",
+    "Our love is tethered, made to last.",
+    "Though others wander, though stars may hide,",
+    "I’ve found my home here by your side.",
+
+    "So even if the skies seem far and wide,",
+    "We’re closer than the stars collide.",
+    "For every dream that night allows,",
+    "I find you here, and I take my vows.",
+
+
+    "Every heartbeat whispers your name.",
+    "You are the reason my world feels magical.",
+    "Loving you is the best decision I ever made.",
+    "With you, forever doesn't feel long enough.",
+    "You are my today, my tomorrow, and my always.",
+
+    "To the IT person who loved you the most 🫶 ",
+    "I love you so much, My Lovely Wife!" 
+];
+
+let textIndex = 0;
+const titleElement = document.getElementById("titleText");
+const messageElement = document.getElementById("messageText");
+
+/* Start music on first tap */
+document.body.addEventListener("click", function(){
+    music.play();
+}, { once:true });
+
+/* Slideshow + Text synced */
+setTimeout(() => {
+    setInterval(()=>{
+        // Fade out text
+        titleElement.style.opacity = 0;
+        messageElement.style.opacity = 0;
+
+        // Change image
+        slides[slideIndex].classList.remove("active");
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add("active");
+
+        // After fade, update text
+        setTimeout(() => {
+            textIndex = (textIndex + 1) % messages.length;
+            titleElement.textContent = titles[textIndex % titles.length];
+            messageElement.textContent = messages[textIndex];
+
+            titleElement.style.opacity = 1;
+            messageElement.style.opacity = 1;
+        }, 800); // fade duration matches CSS
+
+    }, 4000); // change every 4 seconds (sync with CSS fade)
+}, 4000);
+
+/* Floating hearts */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (Math.random()*5+5)+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{ heart.remove(); },8000);
+}
+setInterval(createHeart,600);
+
+function finalMessage(){
+    alert("I love you beyond forever 💍❤️");
+}
+</script>
+
+</body>
+</html>
